@@ -1,3 +1,6 @@
+Adapting end-end rl for forwards project / yumi env. This repo contains code from the official implementation / repository created by Berkeley which can befound at https://github.com/avisingh599/reward-learning-rl. 
+
+
 # reward-learning-rl
 
 
