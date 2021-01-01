@@ -3,8 +3,8 @@
 from collections import OrderedDict
 
 import numpy as np
-from dm_control import suite
-from dm_control.rl.specs import ArraySpec, BoundedArraySpec
+#from dm_control import suite
+#from dm_control.rl.specs import ArraySpec, BoundedArraySpec
 from gym import spaces
 
 from .softlearning_env import SoftlearningEnv

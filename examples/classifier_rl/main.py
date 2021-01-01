@@ -4,6 +4,7 @@ import glob
 import pickle
 import sys
 
+import gym_yumi
 import tensorflow as tf
 import numpy as np
 from ray import tune

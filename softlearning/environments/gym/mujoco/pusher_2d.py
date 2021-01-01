@@ -1,7 +1,7 @@
 import os.path as osp
 
 import numpy as np
-from gym.envs.mujoco.mujoco_env import MujocoEnv
+#from gym.envs.mujoco.mujoco_env import MujocoEnv
 
 from serializable import Serializable
 

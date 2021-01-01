@@ -1,5 +1,5 @@
 import numpy as np
-
+import os
 from softlearning.environments.utils import get_goal_example_environment_from_variant
 
 PICK_TASKS = [
@@ -21,6 +21,10 @@ PUSH_TASKS = [
     'Image48SawyerPushForwardEnv-v0',
     ]
 
+TOY_TASKS = [
+    'Pendulum-v0'
+]
+
 def get_goal_example_from_variant(variant):
     
     env = get_goal_example_environment_from_variant(variant)
@@ -33,6 +37,13 @@ def get_goal_example_from_variant(variant):
         goal_examples = generate_push_goal_examples(total_goal_examples, env)
     elif variant['task'] in PICK_TASKS:
         goal_examples = generate_pick_goal_examples(total_goal_examples, env, variant['task'])
+    elif variant['task'] in TOY_TASKS:
+        
+        pendulum_data = np.load(os.path.join(os.path.dirname(os.path.realpath(__file__)), "expert_pendulum.npz"))
+        top_rewards = pendulum_data['rewards'][pendulum_data['rewards'].argsort()[-total_goal_examples:]]
+        indexes = [np.where(reward == top_rewards)[0][0] for reward in top_rewards]
+        goal_examples = pendulum_data['obs'][indexes]
+
     else:
         raise NotImplementedError
 

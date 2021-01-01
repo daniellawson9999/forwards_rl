@@ -3,7 +3,7 @@ import argparse
 from distutils.util import strtobool
 import json
 import os
-
+import gym_yumi
 import softlearning.algorithms.utils as alg_utils
 import softlearning.environments.utils as env_utils
 from softlearning.misc.utils import datetimestamp
@@ -13,11 +13,11 @@ DEFAULT_ALGORITHM = 'VICE'
 AVAILABLE_ALGORITHMS = set(alg_utils.ALGORITHM_CLASSES.keys())
 
 import gym
-from multiworld.envs.mujoco import register_goal_example_envs
+#from multiworld.envs.mujoco import register_goal_example_envs
 envs_before = set(env_spec.id for env_spec in gym.envs.registry.all())
-register_goal_example_envs()
-envs_after = set(env_spec.id for env_spec in gym.envs.registry.all())
-goal_example_envs = tuple(sorted(envs_after - envs_before))
+#register_goal_example_envs()
+#envs_after = set(env_spec.id for env_spec in gym.envs.registry.all())
+goal_example_envs = tuple(envs_before)
 
 
 def add_ray_init_args(parser):

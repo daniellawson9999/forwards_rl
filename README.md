@@ -1,5 +1,6 @@
 # reward-learning-rl
 
+
 This repository is the official implementation of the following paper: 
 
 **End-to-End Robotic Reinforcement Learning without Reward Engineering** <br/>
@@ -93,6 +94,9 @@ softlearning run_example_local examples.classifier_rl \
 --num-samples 5 \
 --n_epochs 300 \
 --active_query_frequency 10
+
+softlearning run_example_local examples.classifier_rl --n_goal_examples 10 --task=Pendulum-v0 --algorithm VICE --num-samples 1 --n_epochs 15  --video-save-frequency 5
+softlearning run_example_local examples.classifier_rl --n_goal_examples 10 --task=goal-original-yumi-pegtransfer-v0 --algorithm VICE --num-samples 1 --n_epochs 15 
 ```
 The tasks used in the paper were `Image48SawyerPushForwardEnv-v0`, `Image48SawyerDoorPullHookEnv-v0` and `Image48SawyerPickAndPlace3DEnv-v0`.  For the algorithm, you can experiment with `VICERAQ`, `VICE`,  `RAQ`, `SACClassifier`, and `SAC`. The `--num-samples` flag specifies the number of random seeds launched. All results in the paper were averaged across five random seeds. The hyperparameters are stored in `examples/classifier_rl/variants.py`. 
 

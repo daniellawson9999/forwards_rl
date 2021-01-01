@@ -72,8 +72,8 @@ def rollout(env,
                     imsize = env.unwrapped.imsize
                 else:
                     imsize = 200
-                image = env.unwrapped.sim.render(imsize, imsize)
-                #image = env.render(mode=render_mode)
+                #image = env.unwrapped.sim.render(imsize, imsize)
+                image = env.render(mode=render_mode)
                 images.append(image)
             else:
                 raise NotImplementedError

@@ -10,7 +10,7 @@ version: "2.4"
 services:
   avi-softlearning-dev-gpu:
     image: avi-softlearning:${SOFTLEARNING_DEV_GPU_TAG}
-    container_name: avi-softlearning-dev-gpu
+    container_name: softlearning
     runtime: nvidia
     build:
       context: ../.

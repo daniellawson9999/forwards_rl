@@ -3,7 +3,7 @@
 from collections import OrderedDict
 
 import numpy as np
-import robosuite as suite
+#import robosuite as suite
 from gym import spaces
 
 from .softlearning_env import SoftlearningEnv
