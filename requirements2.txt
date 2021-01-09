@@ -1,6 +1,6 @@
 absl-py
 aiohttp
-git+https://github.com/avisingh599/multiworld.git@19bf319422c0016260166bf64e194552bf2a9e68
+#git+https://github.com/avisingh599/multiworld.git@19bf319422c0016260166bf64e194552bf2a9e68
 asn1crypto
 astor
 atomicwrites
@@ -75,7 +75,7 @@ PyWavelets
 #PyYAML
 PyYAML
 psutil
-ray[rllib,debug]
+ray[rllib,debug]==0.6.6
 redis
 requests
 rsa
@@ -89,7 +89,7 @@ setproctitle
 six
 smmap2
 tensorboard==1.15.0
-tensorflow-gpu==1.15.0
+tensorflow==1.15.0
 tensorflow-estimator==1.15.1
 tensorflow-probability==0.7.0
 termcolor

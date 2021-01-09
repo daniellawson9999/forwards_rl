@@ -41,7 +41,6 @@ dependencies:
     - attrs==20.2.0
     - babel==2.8.0
     - backcall==0.2.0
-    - baselines==0.1.6
     - bleach==3.2.1
     - box2d-py==2.3.5
     - cffi==1.11.5
@@ -174,7 +173,7 @@ dependencies:
     - tcolorpy==0.0.8
     - tensorboard==1.15.0
     - tensorflow-estimator==1.15.1
-    - tensorflow-gpu==1.15.0
+    - tensorflow==1.15.0
     - tensorflow-probability==0.7.0
     - termcolor==1.1.0
     - terminado==0.9.1

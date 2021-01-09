@@ -4,6 +4,7 @@ from distutils.util import strtobool
 import json
 import os
 import gym_yumi
+import rlbench.gym
 import softlearning.algorithms.utils as alg_utils
 import softlearning.environments.utils as env_utils
 from softlearning.misc.utils import datetimestamp

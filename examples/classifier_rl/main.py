@@ -5,10 +5,10 @@ import pickle
 import sys
 
 import gym_yumi
+import rlbench.gym
 import tensorflow as tf
 import numpy as np
 from ray import tune
-
 from softlearning.environments.utils import get_goal_example_environment_from_variant
 from softlearning.algorithms.utils import get_algorithm_from_variant
 from softlearning.policies.utils import get_policy_from_variant, get_policy
