@@ -5,7 +5,6 @@ import pickle
 import sys
 
 import gym_yumi
-import rlbench.gym
 import tensorflow as tf
 import numpy as np
 from ray import tune
