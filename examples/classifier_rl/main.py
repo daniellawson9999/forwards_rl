@@ -5,6 +5,7 @@ import pickle
 import sys
 
 import gym_yumi
+import gym_taurus
 import tensorflow as tf
 import numpy as np
 from ray import tune
@@ -139,8 +140,8 @@ class ExperimentRunnerClassifierRL(ExperimentRunner):
     def picklables(self):
         picklables = {
             'variant': self._variant,
-            'training_environment': self.training_environment,
-            'evaluation_environment': self.evaluation_environment,
+            #'training_environment': self.training_environment,
+            #'evaluation_environment': self.evaluation_environment,
             'sampler': self.sampler,
             'algorithm': self.algorithm,
             'Qs': self.Qs,

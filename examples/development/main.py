@@ -123,6 +123,7 @@ class ExperimentRunner(tune.Trainable):
             which makes things not so usable.
         """
         pickle_path = self._pickle_path(checkpoint_dir)
+        #import pdb; pdb.set_trace()
         with open(pickle_path, 'wb') as f:
             pickle.dump(self.picklables, f)
 

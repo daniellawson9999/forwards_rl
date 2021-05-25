@@ -40,10 +40,12 @@ def get_goal_example_from_variant(variant):
     elif variant['task'] in TOY_TASKS:
         
         pendulum_data = np.load(os.path.join(os.path.dirname(os.path.realpath(__file__)), "expert_pendulum.npz"))
-        top_rewards = pendulum_data['rewards'][pendulum_data['rewards'].argsort()[-total_goal_examples:]]
-        indexes = [np.where(reward == top_rewards)[0][0] for reward in top_rewards]
+        #top_rewards = pendulum_data['rewards'][pendulum_data['rewards'].argsort()[-total_goal_examples:]]
+        #indexes = [np.where(reward == pendulum_data['rewards'])[0][0] for reward in top_rewards]
+        indexes = pendulum_data['rewards'].argsort()[-total_goal_examples:]
         goal_examples = pendulum_data['obs'][indexes]
-
+        np.random.shuffle(goal_examples)
+        #import pdb; pdb.set_trace()
     else:
         raise NotImplementedError
 
